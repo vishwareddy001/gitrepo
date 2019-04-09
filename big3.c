@@ -3,7 +3,7 @@
  */
 #include <stdio.h>
  
-void main()
+void biggest()
 {
     int num1, num2, num3;
  
