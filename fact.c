@@ -1,6 +1,6 @@
 #include <stdio.h>
  
-int main()
+int fact()
 {
   int c, n, fact = 1;
  
