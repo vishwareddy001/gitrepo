@@ -13,7 +13,7 @@ int reverse()
         n /= 10;
     }
 
-    printf("Reversed Number = %d", reversedNumber);
+    printf("Reversed Num = %d", reversedNumber);
 
     return 0;
 }
