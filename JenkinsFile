@@ -1,0 +1,24 @@
+pipeline {
+	agent { label "windows" }
+	stages {
+		stage ('build') {
+      agent { label "slave2" }
+			sh 'echo "This is build stage"'
+          parallel(
+            a: {
+                  echo "Tests on Linux"
+               },
+            b: {
+                  echo "Tests on Windows"
+               }
+               )
+		    }
+		stage ('deploy') {
+    	sh 'echo "This is deploy stage"'
+		}
+    stage ('test') {
+    agent { label "slave1" }
+			sh 'echo "This is a test stage"'
+		}
+	}
+}
